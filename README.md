@@ -1,6 +1,7 @@
 # 视频演示
-<video src="https://github.com/lzhshq/mpc_gait/blob/main/%E6%BC%94%E7%A4%BA.mp4?raw=true" controls width="700">
-  你的浏览器不支持 HTML5 视频播放，请点击 <a href="https://github.com/lzhshq/mpc_gait/blob/main/%E6%BC%94%E7%A4%BA.mp4?raw=true">这里</a> 下载视频。
+# 视频演示
+<video src="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true" controls width="700" autoplay loop muted playsinline>
+  你的浏览器不支持 HTML5 视频播放，请点击 <a href="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true">这里</a> 下载视频。
 </video>
 最终提交文件夹在：
 - `deliverables/final_a1_speed0p4/`
