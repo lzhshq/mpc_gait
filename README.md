@@ -1,4 +1,6 @@
 <video src="https://github.com/lzhshq/mpc_gait/演示.mp4" controls width="600">
+你的浏览器不支持视频播放
+</video>
 最终提交文件夹在：
 - `deliverables/final_a1_speed0p4/`
 
