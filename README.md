@@ -1,5 +1,5 @@
 # 视频演示
-<video src="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true" controls width="700" style="max-width:100%;">
+<video src="[https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true](https://private-user-images.githubusercontent.com/220468817/566067194-bedf8e49-6356-4b29-aa13-bff33885c9d8.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzM4OTk1OTAsIm5iZiI6MTc3Mzg5OTI5MCwicGF0aCI6Ii8yMjA0Njg4MTcvNTY2MDY3MTk0LWJlZGY4ZTQ5LTYzNTYtNGIyOS1hYTEzLWJmZjMzODg1YzlkOC5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMxOVQwNTQ4MTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYmYzOTM0N2EzZDRiNTA2NTU4YTk2MGVlOWFiZDQwYmVkZDMyNTBmMTc2OTA3OTM3NDFkYmFkYzNhMDBhOGRlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.-_di4BL8Qj8ClwCjlYelyKE0oIkObAtoY7zbnaBNCXo)" controls width="700" style="max-width:100%;">
   你的浏览器不支持视频播放，可下载查看：<a href="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true">演示.mp4</a>
 </video>
 最终提交文件夹在：
