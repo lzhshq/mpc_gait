@@ -1,0 +1,112 @@
+<mujoco model="simple_quadruped_12dof">
+  <compiler angle="radian" coordinate="local"/>
+  <option timestep="0.0041666667" gravity="0 0 -9.81" integrator="RK4"/>
+  <size nstack="300000" njmax="2000" nconmax="500"/>
+
+  <default>
+    <joint limited="true" damping="1.2" armature="0.02"/>
+    <geom friction="0.9 0.2 0.1" density="400" contype="1" conaffinity="1" solref="0.01 1" solimp="0.9 0.95 0.001"/>
+    <motor ctrlrange="-180 180"/>
+  </default>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.8 0.9 1.0" rgb2="0.1 0.1 0.2" width="512" height="512"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.2 0.2 0.2" rgb2="0.3 0.3 0.3" width="512" height="512"/>
+    <material name="gridmat" texture="grid" texrepeat="6 6" reflectance="0.05"/>
+  </asset>
+
+  <worldbody>
+    <geom name="ground" type="plane" size="5 5 0.1" material="gridmat" condim="3"/>
+
+    <body name="base" pos="0 0 0.45">
+      <freejoint name="root"/>
+      <geom name="base_geom" type="box" size="0.18 0.06 0.04" rgba="0.2 0.2 0.25 1" density="450"/>
+
+      <!-- nominal hip locations -->
+      <!-- FL -->
+      <body name="FL_hip" pos="0.18 0.10 0.0">
+        <joint name="FL_hip_abd" axis="1 0 0" range="-0.6 0.6"/>
+        <geom type="capsule" fromto="0 0 0 0 0.05 0" size="0.025" rgba="0.7 0.2 0.2 1"/>
+        <body name="FL_thigh" pos="0 0.05 0">
+          <joint name="FL_hip_flex" axis="0 1 0" range="-1.2 1.2"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.02" rgba="0.7 0.2 0.2 1"/>
+          <body name="FL_shank" pos="0 0 -0.18">
+            <joint name="FL_knee" axis="0 1 0" range="-2.0 0.1"/>
+            <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.018" rgba="0.7 0.2 0.2 1"/>
+            <geom name="FL_foot_geom" type="sphere" pos="0 0 -0.18" size="0.025" rgba="0.9 0.9 0.9 1" friction="1.0 0.3 0.1"/>
+            <site name="FL_foot" pos="0 0 -0.18" size="0.01" rgba="0 1 0 1"/>
+          </body>
+        </body>
+      </body>
+
+      <!-- FR -->
+      <body name="FR_hip" pos="0.18 -0.10 0.0">
+        <joint name="FR_hip_abd" axis="1 0 0" range="-0.6 0.6"/>
+        <geom type="capsule" fromto="0 0 0 0 -0.05 0" size="0.025" rgba="0.2 0.2 0.7 1"/>
+        <body name="FR_thigh" pos="0 -0.05 0">
+          <joint name="FR_hip_flex" axis="0 1 0" range="-1.2 1.2"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.02" rgba="0.2 0.2 0.7 1"/>
+          <body name="FR_shank" pos="0 0 -0.18">
+            <joint name="FR_knee" axis="0 1 0" range="-2.0 0.1"/>
+            <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.018" rgba="0.2 0.2 0.7 1"/>
+            <geom name="FR_foot_geom" type="sphere" pos="0 0 -0.18" size="0.025" rgba="0.9 0.9 0.9 1" friction="1.0 0.3 0.1"/>
+            <site name="FR_foot" pos="0 0 -0.18" size="0.01" rgba="0 1 0 1"/>
+          </body>
+        </body>
+      </body>
+
+      <!-- RL -->
+      <body name="RL_hip" pos="-0.18 0.10 0.0">
+        <joint name="RL_hip_abd" axis="1 0 0" range="-0.6 0.6"/>
+        <geom type="capsule" fromto="0 0 0 0 0.05 0" size="0.025" rgba="0.2 0.7 0.2 1"/>
+        <body name="RL_thigh" pos="0 0.05 0">
+          <joint name="RL_hip_flex" axis="0 1 0" range="-1.2 1.2"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.02" rgba="0.2 0.7 0.2 1"/>
+          <body name="RL_shank" pos="0 0 -0.18">
+            <joint name="RL_knee" axis="0 1 0" range="-2.0 0.1"/>
+            <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.018" rgba="0.2 0.7 0.2 1"/>
+            <geom name="RL_foot_geom" type="sphere" pos="0 0 -0.18" size="0.025" rgba="0.9 0.9 0.9 1" friction="1.0 0.3 0.1"/>
+            <site name="RL_foot" pos="0 0 -0.18" size="0.01" rgba="0 1 0 1"/>
+          </body>
+        </body>
+      </body>
+
+      <!-- RR -->
+      <body name="RR_hip" pos="-0.18 -0.10 0.0">
+        <joint name="RR_hip_abd" axis="1 0 0" range="-0.6 0.6"/>
+        <geom type="capsule" fromto="0 0 0 0 -0.05 0" size="0.025" rgba="0.7 0.7 0.2 1"/>
+        <body name="RR_thigh" pos="0 -0.05 0">
+          <joint name="RR_hip_flex" axis="0 1 0" range="-1.2 1.2"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.02" rgba="0.7 0.7 0.2 1"/>
+          <body name="RR_shank" pos="0 0 -0.18">
+            <joint name="RR_knee" axis="0 1 0" range="-2.0 0.1"/>
+            <geom type="capsule" fromto="0 0 0 0 0 -0.18" size="0.018" rgba="0.7 0.7 0.2 1"/>
+            <geom name="RR_foot_geom" type="sphere" pos="0 0 -0.18" size="0.025" rgba="0.9 0.9 0.9 1" friction="1.0 0.3 0.1"/>
+            <site name="RR_foot" pos="0 0 -0.18" size="0.01" rgba="0 1 0 1"/>
+          </body>
+        </body>
+      </body>
+
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- order must match joint mapping in code -->
+    <motor name="m_FL_hip_abd" joint="FL_hip_abd" gear="1"/>
+    <motor name="m_FL_hip_flex" joint="FL_hip_flex" gear="1"/>
+    <motor name="m_FL_knee" joint="FL_knee" gear="1"/>
+
+    <motor name="m_FR_hip_abd" joint="FR_hip_abd" gear="1"/>
+    <motor name="m_FR_hip_flex" joint="FR_hip_flex" gear="1"/>
+    <motor name="m_FR_knee" joint="FR_knee" gear="1"/>
+
+    <motor name="m_RL_hip_abd" joint="RL_hip_abd" gear="1"/>
+    <motor name="m_RL_hip_flex" joint="RL_hip_flex" gear="1"/>
+    <motor name="m_RL_knee" joint="RL_knee" gear="1"/>
+
+    <motor name="m_RR_hip_abd" joint="RR_hip_abd" gear="1"/>
+    <motor name="m_RR_hip_flex" joint="RR_hip_flex" gear="1"/>
+    <motor name="m_RR_knee" joint="RR_knee" gear="1"/>
+  </actuator>
+</mujoco>
+

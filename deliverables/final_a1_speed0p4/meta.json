@@ -1,0 +1,55 @@
+{
+  "dt": 0.002,
+  "duration": 12.0,
+  "speed_cmd": 0.4,
+  "joint_names": [
+    "FL_hip_joint",
+    "FL_thigh_joint",
+    "FL_calf_joint",
+    "FR_hip_joint",
+    "FR_thigh_joint",
+    "FR_calf_joint",
+    "RL_hip_joint",
+    "RL_thigh_joint",
+    "RL_calf_joint",
+    "RR_hip_joint",
+    "RR_thigh_joint",
+    "RR_calf_joint"
+  ],
+  "qpos_adr": [
+    10,
+    11,
+    12,
+    7,
+    8,
+    9,
+    16,
+    17,
+    18,
+    13,
+    14,
+    15
+  ],
+  "dof_adr": [
+    9,
+    10,
+    11,
+    6,
+    7,
+    8,
+    15,
+    16,
+    17,
+    12,
+    13,
+    14
+  ],
+  "gait": {
+    "period": 0.5,
+    "duty": 0.6,
+    "swing_height": 0.1,
+    "mu": 0.9,
+    "fz_max": 900.0
+  },
+  "model_xml": "C:\\Users\\38433\\task2_mpc_gait\\assets\\mujoco_menagerie\\unitree_a1\\scene.xml"
+}

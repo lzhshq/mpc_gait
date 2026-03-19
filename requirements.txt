@@ -1,0 +1,7 @@
+numpy>=1.26
+scipy>=1.11
+mujoco>=3.1
+cvxpy>=1.4
+osqp>=0.6
+pandas>=2.1
+matplotlib>=3.8
