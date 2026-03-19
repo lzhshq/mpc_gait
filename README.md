@@ -1,5 +1,6 @@
-<video src="https://github.com/lzhshq/mpc_gait/raw/演示.mp4" controls width="600">
-你的浏览器不支持视频播放
+# 视频演示
+<video src="https://github.com/你的用户名/仓库名/raw/main/演示.mp4" controls width="700">
+  你的浏览器不支持 HTML5 视频播放，请更新浏览器后重试。
 </video>
 最终提交文件夹在：
 - `deliverables/final_a1_speed0p4/`
