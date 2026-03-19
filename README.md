@@ -1,5 +1,4 @@
 # 视频演示
-# 视频演示
 <video src="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true" controls width="700" autoplay loop muted playsinline>
   你的浏览器不支持 HTML5 视频播放，请点击 <a href="https://github.com/lzhshq/mpc_gait/blob/main/演示.mp4?raw=true">这里</a> 下载视频。
 </video>
